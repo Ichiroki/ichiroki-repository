@@ -25,8 +25,9 @@
                                 <tr>
                                     <td>{{ $auther->id }}</td>
                                     <td>{{ $auther->name }}</td>
-                                    <td class="edit">
-                                        <a href="{{ route('authors.edit', $auther) }}" class="btn btn-success">Edit</a>
+                                    <td class="edit" x-data="{open: false}">
+                                        <a href="{{ route('authors.edit', $auther) }}" class="btn btn-success border-green-500">Edit</a>
+                                        <div></div>
                                     </td>
                                     <td class="delete">
                                         <form action="{{ route('authors.destroy', $auther->id) }}" method="post"
